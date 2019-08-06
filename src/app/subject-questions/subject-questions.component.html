@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-title>Questions List</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let question of questions">
+        <h3 mat-line>
+          <a mat-button [routerLink]="['/answers-list',question.questionId]">{{question.title}}</a>
+        </h3>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <button mat-fab color="primary" [routerLink]="['/question-add']">Add</button>
+</mat-card>
